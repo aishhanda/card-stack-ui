@@ -123,7 +123,7 @@ createBtn.addEventListener("click", function (e) {
     bookings: "1 time"
   };
 
-  cards.unshift(cardData); // newest on top
+  cards.unshift(cardData); 
   saveCards(cards);
 
   loadCards();
@@ -154,4 +154,5 @@ downBtn.addEventListener("click", function () {
   cards.unshift(cards.pop());
   saveCards(cards);
   loadCards();
+
 });
