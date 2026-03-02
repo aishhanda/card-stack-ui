@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================
+   LAYOUT
+===================== */
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.card-stack {
+  position: relative;
+  width: 340px;
+  height: 200px;
+}
+
+/* =====================
+   CARD BASE
+===================== */
+
+.card {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+
+/* STACK DEPTH */
+
+.card-1 {
+  z-index: 3;
+}
+
+.card-2 {
+  z-index: 2;
+  transform: translateY(14px) scale(0.97);
+  opacity: 0.7;
+}
+
+.card-3 {
+  z-index: 1;
+  transform: translateY(28px) scale(0.94);
+  opacity: 0.45;
+}
+
+/* =====================
+   CARD CONTENT
+===================== */
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* INFO GRID */
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-col.right {
+  text-align: right;
+}
+
+.label {
+  font-size: 13px;
+  color: #9a9a9a;
+}
+
+.value {
+  font-size: 14px;
+  color: #222;
+  font-weight: 500;
+}
+
+/* =====================
+   ACTION BUTTONS
+===================== */
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+
+
+.action-btn {
+  height: 34px;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+}
+
+.call {
+  background: #111;
+  color: white; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px;
+
+}
+
+.call img{
+    height: 15px; 
+    width: 15px;
+}
+.message {
+  background: #efefef;
+}
+
+/* =====================
+   SIDE CONTROLS
+===================== */
+
+.side-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.circle-btn img{
+    width: 15px;
+    height: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #f2f2f2;
+}
+
+/* =====================
+   MODAL
+===================== */
+
+.modal {
+  
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: none; 
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================
+   FORM CARD
+===================== */
+
+.form-card {
+  width: 340px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.form-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* =====================
+   INPUT FIELDS
+===================== */
+
+.field {
+  margin-bottom: 12px;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  font-size: 13px;
+}
+
+.field input::placeholder {
+  color: #aaa;
+}
+
+/* =====================
+   RADIO PILLS
+===================== */
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.radio-pill {
+  position: relative;
+}
+
+.radio-pill input {
+  display: none;
+}
+
+.radio-pill span {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1.5px solid #ccc;
+  color: #555;
+}
+
+/* Checked State */
+.radio-pill input:checked + span {
+  background: #f5f5f5;
+  font-weight: 500;
+}
+
+/* Color Variants */
+.emergency span {
+  border-color: #ff5b5b;
+  color: #ff5b5b;
+}
+
+.important span {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.urgent span {
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.norush span {
+  border-color: #bbb;
+  color: #666;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+
+.btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.create {
+  background: #111;
+  color: #fff;
+}
+
+.close {
+  background: #ff4d4d;
+  color: #fff;
+}
